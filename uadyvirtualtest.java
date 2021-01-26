@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class uadyvirtualtest {
+public class uadyVirtualCorrecto {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
@@ -16,7 +16,7 @@ public class uadyvirtualtest {
   public void setUp() throws Exception {
 	System.setProperty("webdriver.chrome.driver", "C:\\Users\\cesar\\Documents\\chromedriver.exe");
     driver = new ChromeDriver();
-    setBaseUrl("https://www.google.com/");
+    baseUrl="https://www.google.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
@@ -30,10 +30,10 @@ public class uadyvirtualtest {
     driver.get("https://es.uadyvirtual.uady.mx/login/index.php");
     driver.findElement(By.id("username")).click();
     driver.findElement(By.id("username")).clear();
-    driver.findElement(By.id("username")).sendKeys("A14003939");
+    driver.findElement(By.id("username")).sendKeys("1111111");
     driver.findElement(By.id("password")).click();
     driver.findElement(By.id("password")).clear();
-    driver.findElement(By.id("password")).sendKeys("Roblucci12");
+    driver.findElement(By.id("password")).sendKeys("1111111");
     driver.findElement(By.id("loginbtn")).click();
     // Warning: assertTextPresent may require manual changes
     assertTrue(driver.findElement(By.cssSelector("BODY")).getText().matches("^[\\s\\S]*Datos erróneos\\. Por favor, inténtelo otra vez\\.[\\s\\S]*$"));
